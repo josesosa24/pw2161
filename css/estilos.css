@@ -1,0 +1,11 @@
+/*etiquetas, identificadores, clases y pseudoelementos-> TODOS SE DEBEN PONER EN ORDEN ALFABETICO*/
+body 
+{
+	/*atributos:valor;*/
+	background: rgb(255,255,255);
+	color: #000000;
+	/*maxwidth es el ancho maximo de la pantalla*/
+	margin:0 auto;
+	/*0 significa que no se mueve ni arriba ni abajo, el auto distribuye el espacio vacio a ambos lados de la caja*/
+	max-width: 1024px;
+}
