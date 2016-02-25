@@ -9,3 +9,33 @@ body
 	/*0 significa que no se mueve ni arriba ni abajo, el auto distribuye el espacio vacio a ambos lados de la caja*/
 	max-width: 1024px;
 }
+
+header 
+{
+	background: black;
+	border:1px solid black;
+	border-radius: 10px; 
+	color: white;
+}
+
+header h1 { text-align: center;}
+
+header nav ul li 
+{
+	/*border: 1px solid white;*/
+	background: white;
+	border-radius: 5px;
+	color: black;
+	display: inline-block; /*Rompe modelo de cajas*/
+	margin-right: 50px;
+	padding: 10px;
+}
+
+header nav ul li:hover
+{
+	background: black;
+	color: white;
+}
+
+header nav ul { text-align: center;}
+
