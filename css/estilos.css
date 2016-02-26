@@ -12,22 +12,37 @@ body
 
 header 
 {
-	background: black;
-	border:1px solid black;
+	background: gray;
+	border:1px solid gray;
 	border-radius: 10px; 
 	color: white;
 }
 
-header h1 { text-align: center;}
+header h1 
+{
+ 	text-shadow:2px 2px 1px black;/* El tercer parametro atenua la sombra*/
+	text-align: center;
+}
+
+header img 
+{
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 80px;
+}
+
+header nav ul { text-align: center;}
 
 header nav ul li 
 {
 	/*border: 1px solid white;*/
 	background: white;
 	border-radius: 5px;
+	box-shadow: -2px 2px black;
 	color: black;
 	display: inline-block; /*Rompe modelo de cajas*/
-	margin-right: 50px;
+	margin-right: 40px;
 	padding: 10px;
 }
 
@@ -37,5 +52,16 @@ header nav ul li:hover
 	color: white;
 }
 
-header nav ul { text-align: center;}
+/*Aqui van los IDs*/
+#seccion1 {/* border: 20px solid black; */}
+
+#seccion1 article 
+{ 
+	/*border:2px solid red;*/
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
+
+
 
