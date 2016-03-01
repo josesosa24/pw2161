@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio y Video</title>
+</head>
+<body>
+	<!-- Se deben considerar varios formatos para distintos navegadores -->
+	<!-- se usa loop para que el video se reproduzca automaticamente de forma indefinida -->
+	<!-- preload y autoplay son para que el video se cargue antes de empezar a reproducirse y que se empiece a reproducir automaticamente -->
+	<!-- Se deben activar controles de video  -->
+	<video controls preload autoplay loop>
+		<source src="media/video/Chrome_ImF.mp4" type="video/mp4"/>
+		<source src="media/video/Chrome_ImF.ogv" type="video/ogg"/>
+		<source src="media/video/Chrome_ImF.webm" type="video/webm"/>
+		TU NAVEGADOR NO SOPORTA ESTA CARACTERISTICA :'C
+	</video>
+
+	<video controls preload>
+		<source src="media/video/html5.mp4" type="video/mp4"/>
+		<source src="media/video/html5.webm" type="video/webm"/>
+		TU NAVEGADOR NO SOPORTA ESTA CARACTERISTICA :'C
+	</video>
+
+	<audio controls preload>
+		<source src="media/audio/musica.mp3" type="audio/mp3"/>
+	</audio>
+
+	<audio controls preload>
+		<source src="media/audio/audiohtml5.mp4" type="audio/mp4"/>
+	</audio>
+	
+</body>
+</html>
