@@ -51,6 +51,29 @@
 
 	</section>
 	<article>
+		<form action="" method="">
+			<br>
+			Escribe algo aquí <br>
+			<!-- Siempre debemos escoger el input correcto y hacer las validaciones pertinentes -->
+			<!-- Validaciones minimas: Escoger la caja, Pasar Datos, Servidor  -->
+			<input type="text" required placeholder="Escribe algo aquí" size=20 maxlength=8 autofocus><br>
+			<!-- placeholder se usa para mostrar un texto en la caja el cual desaparecerá despues de que se teclee algo -->
+			<input type="date" required><br>
+			<input type="number" min=0 max=10 required><br>
+			<input type="email" required><br>
+			<input type="radio" name="genero" value="1">Masculino
+			<input type="radio" name="genero" value="2">Femenino
+			<!-- <input type="radio" name="genero" value="">Otro -->
+			<br>
+			<select name="genero2" id="">
+				<option value="">Femenino</option>
+				<option value="">Masculino</option>
+				<option value="">Otros</option>
+			</select>
+			<br>
+			<input type="submit" required>
+
+		</form>
 		<!-- Se pueden usar articles sin secciones, pero se recomienda ponerlos en secciones. -->
 	</article>
 	</main>
