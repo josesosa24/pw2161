@@ -20,7 +20,8 @@ header
 
 header h1 
 {
- 	text-shadow:2px 2px 1px black;/* El tercer parametro atenua la sombra*/
+	font-family: 'Finger Paint', serif;
+	text-shadow:2px 2px 1px black;/* El tercer parametro atenua la sombra*/
 	text-align: center;
 }
 
@@ -42,6 +43,7 @@ header nav ul li
 	box-shadow: -2px 2px black;
 	color: black;
 	display: inline-block; /*Rompe modelo de cajas*/
+	font-family: 'Chelsea Market',serif;
 	margin-right: 40px;
 	padding: 10px;
 }
@@ -59,6 +61,7 @@ header nav ul li:hover
 { 
 	/*border:2px solid red;*/
 	display: inline-block;
+	font-family: 'Poiret One', serif;
 	vertical-align: top;
 	width: 49%;
 }

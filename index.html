@@ -5,12 +5,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Primer Página HTML5</title>
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Chelsea+Market|Finger+Paint' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
 	<header>
 		<img src="img/logoitc.png">
-		<h1>Mi aplicación</h1>
+		<h1>
+			<span class="icon-home3">
+				Mi aplicación
+			</span>
+			
+		</h1>
 		<nav>
 			<ul>
 				<li>Opcion 1</li>
@@ -61,8 +68,9 @@
 			<input type="date" required><br>
 			<input type="number" min=0 max=10 required><br>
 			<input type="email" required><br>
-			<input type="radio" name="genero" value="1">Masculino
-			<input type="radio" name="genero" value="2">Femenino
+			<input type="radio" name="genero" value="0">Masculino
+			<input type="radio" name="genero" value="1">Femenino
+			<!-- Poner datos como string para que ocupen solo un byte -->
 			<!-- <input type="radio" name="genero" value="">Otro -->
 			<br>
 			<select name="genero2" id="">
