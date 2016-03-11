@@ -6,10 +6,13 @@ body
 	max-width: 1024px;	
 }
 
-header 
+footer
 {
-	background: #B3D8EB;
+	background: #0E6CB0;
+	margin-bottom: 0px;
 }
+
+header { background: #B3D8EB;}
 
 header nav 
 {
@@ -24,7 +27,22 @@ header nav ul li
 	margin-right: 20px;
 	color: white;
 }
+.container article 
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 33%;
+}
 
+.lookmore 
+{
+	border-style: none;
+	border-radius: 2px;
+	border: 1px solid gray;
+	color: blue;
+	margin-left: 100px;
+	padding: 6px 16px 6px 16px;
+}
 #logo 
 {
 	margin-top: -200px;
