@@ -1,0 +1,89 @@
+body {
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 1078px; /*el diseño lo requiere de esta forma*/
+}
+
+header input {
+	border: 1px solid black;
+	border-radius: 2px;
+	float: right;
+	margin-top: 10px;
+	margin-right: -240px;
+	position: relative;
+}
+
+header nav ul li {
+	color: gray;
+	display: inline-block;
+	font-size: 1.8em;
+	margin-right: 20px;
+	text-decoration: underline; /*border-bottom: 1px solid black;*/
+	vertical-align: top;
+}
+
+header nav {
+	margin-left: 220px;
+}
+
+#dboffer {
+	/*left, top, bottom, right: */
+	left: 320px;
+	position: absolute;
+	top: 140px;
+}
+
+#terceraSeccion article{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#segundaSeccion article {
+	text-align: right;
+}
+
+.numerotelefono {
+	color: #d54296;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.8em;
+	margin-right: 160px;
+}
+
+#granthams {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#paint {
+	float: right;
+}
+
+#secc01art01 {
+	width: 60%;
+} 
+
+#secc01art02 {
+	width: 30%;
+} 
+
+#primerSeccion {
+	margin-top: 60px;
+}
+
+#primerSeccion article {
+	display: inline-block;
+	margin-left: 25px;
+	vertical-align: top;
+}
+
+.wecanoffer {
+	color: #d54296;
+	font-size: 4em;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*#terceraseccion article img 
+{
+	vertical-align: middle;
+}*/
