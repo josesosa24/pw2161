@@ -1,0 +1,43 @@
+body {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+.cube {
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+}
+
+#section1 {
+	width: 20%;
+}
+
+#section2 {
+	width: 78%;
+}
+
+#section1, #section2 {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.imgcube {
+	width:90%;
+}
+
+#imgpanel {
+	width: 100%;
+}
+
+.userContainer {
+	background: blue;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 24%;
+}
+
+.userimg {
+	width: 100%;
+}
