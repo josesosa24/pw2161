@@ -1,0 +1,90 @@
+body {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+header {
+	background: rgb(240,240,240);
+}
+
+.art01 {
+	width: 26%;
+}
+.art02 {
+	width: 70%;
+}
+
+.art01, .art02 {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#imgArt02 {
+	width: 100%;
+}
+
+#logogu {
+	width: 70%;
+}
+
+.divColor {
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	height: 200px;
+}
+
+#divColor1 {
+	background: rgb(180,208,82);
+}
+
+#divColor2 {
+	background: rgb(84,84,84);
+}
+
+#divColor3 {
+	background: rgb(212,45,63);
+}
+
+#divColor4{
+	background: rgb(228,228,228);
+}
+
+#Section1 {
+	background: rgb(43,43,43);
+}
+
+#Section2 {
+	border-top: 2px solid rgb(228,228,228); 
+	background: rgb(43,43,43);
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.section2Art {
+	text-align: right;
+	width: 32%;
+	display: inline-block;
+	vertical-align: top;
+	/*border-top: 2px dotted rgb(228,228,228); */
+	border: 1px solid white;
+}
+
+.imgnews {
+	width: 80%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	border: 1px solid white;
+}
+
+#lista ul li {
+	list-style:  none;
+}
+
+#lista {
+	width: 80%;
+	margin-left: 20%;
+	text-align: left;
+	border: 1px solid white;
+}
+
