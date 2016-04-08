@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Practica 4</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/estilos.css">
 	</head>
 	<body>
@@ -10,15 +11,19 @@
 			<img src="img/logo.png" alt="">
 			<nav>
 				<div>
-					<img src="img/notificaciones.png" alt="">
-					<img src="img/mensajes.png" alt="">
-					<img src="img/ajustes.png" alt="">
+					<img class="imgNav" src="img/notificaciones.png" alt="">
+					<img class="imgNav" src="img/mensajes.png" alt="">
+					<img class="imgNav" src="img/ajustes.png" alt="">
 				</div>
 			</nav>
 		</header>
 
 		<section id="section1">
 			<article id="panelLinks">
+				<div class="imgPanel2">
+					<img class="logoLinks" src="img/logolinks.png" alt="">
+					<p class="Parrafo">Panel with Links</p>
+				</div>
 				<ul>
 					<li>Example</li>
 					<li>Example</li>
@@ -33,58 +38,63 @@
 				</ul>
 			</article>
 			<article id="panelProgress">
-				<div>
-					<p>Progress Bar</p>
-					<img  class="imgcube" src="img/barra01.png" alt="">
+				<div class="imgPanel2">
+					<img class="logoLinks" src="img/logoprogress.png" alt="">
+					<p class="Parrafo">Panel with Progress</p>
 				</div>
 				<div>
-					<p>Progress Bar</p>
-					<img  class="imgcube" src="img/barra02.png" alt="">
+					<p class="headerProgress">Progress Bar</p>
+					<img  class="imgBarra" src="img/barra01.png" alt="">
 				</div>
 				<div>
-					<p>Progress Bar</p>
-					<img  class="imgcube" src="img/barra03.png" alt="">
+					<p class="headerProgress">Progress Bar</p>
+					<img  class="imgBarra" src="img/barra02.png" alt="">
 				</div>
 				<div>
-					<p>Progress Bar</p>
-					<img  class="imgcube" src="img/barra04.png" alt="">
+					<p class="headerProgress">Progress Bar</p>
+					<img  class="imgBarra" src="img/barra03.png" alt="">
+				</div>
+				<div>
+					<p class="headerProgress">Progress Bar</p>
+					<img  class="imgBarra" src="img/barra04.png" alt="">
 				</div>
 			</article>
 		</section>
 
 		<section id="section2">
 			<article id="simpleCubes">
+				<div class="articleHeader"> Simple Cubes</div>
 				<div class="cube" id="cube1">
-					<img src="img/cubo1.png" alt="">
+					<img class="imgCube" src="img/cubo1.png" alt="">
 					<p>
-						Lorem ipsum dolor sit amet, <br>
+						Lorem ipsum dolor  <br>
 						consectetur adipisicing <br>
 						elit. 
 					</p>
 				</div>
 
 				<div class="cube" id="cube2">
-					<img src="img/cubo02.png" alt="">
+					<img class="imgCube" src="img/cubo02.png" alt="">
 					<p>
-						Lorem ipsum dolor sit amet, <br>
+						Lorem ipsum dolor  <br>
 						consectetur adipisicing <br>
 						elit. 
 					</p>
 				</div>
 
 				<div class="cube" id="cube3">
-					<img src="img/cubo03.png" alt="">
+					<img class="imgCube" src="img/cubo03.png" alt="">
 					<p>
-						Lorem ipsum dolor sit amet, <br>
+						Lorem ipsum dolor  <br>
 						consectetur adipisicing <br>
 						elit. 
 					</p>
 				</div>
 
 				<div class="cube" id="cube4">
-					<img src="img/cubo04.png" alt="">
+					<img class="imgCube" src="img/cubo04.png" alt="">
 					<p>
-						Lorem ipsum dolor sit amet, <br>
+						Lorem ipsum dolor <br>
 						consectetur adipisicing <br>
 						elit. 
 					</p>
@@ -93,34 +103,36 @@
 			</article>
 
 			<article id="panels">
+				<div class="articleHeader"> Panels</div>
 				<div>
 					<img id="imgpanel" src="img/panels.png" alt="">
 				</div>
 			</article>
 
 			<article id="Users">
+				<div class="articleHeader"> Users</div>
 				<div  class="userContainer">
-					<img class="userimg" src="img/usuario01.png" alt="">
-					<p>User Example</p>
-					<button>Send Message</button>
+					<img id="firstOne" class="userimg" src="img/usuario01.png" alt="">
+					<p class="UserEjemplo">User Example</p>
+					<button class="sendButton">Send Message</button>
 				</div>
 
 				<div class="userContainer">
 					<img class="userimg" src="img/usuario02.png" alt="">
-					<p>User Example</p>
-					<button>Send Message</button>
+					<p class="UserEjemplo">User Example</p>
+					<button class="SendButton">Send Message</button>
 				</div>
 
 				<div class="userContainer">
 					<img class="userimg" src="img/usuario03.png" alt="">
-					<p>User Example</p>
-					<button>Send Message</button>
+					<p class="UserEjemplo">User Example</p>
+					<button class="SendButton">Send Message</button>
 				</div>
 
 				<div class="userContainer">
 					<img class="userimg" src="img/usuario04.png" alt="">
-					<p>User Example</p>
-					<button>Send Message</button>
+					<p class="UserEjemplo">User Example</p>
+					<button class="SendButton">Send Message</button>
 				</div>
 			</article>
 		</section>

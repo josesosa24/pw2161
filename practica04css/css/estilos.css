@@ -1,20 +1,71 @@
 body {
 	margin: 0 auto;
 	width: 1024px;
+	background: rgb(239,239,239);
+	border-left: 6px solid rgb(39,94,144);
+	border-right: 6px solid rgb(39,94,144);
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	background: rgb(39,94,144);
+	text-align: center;
+}
+
+header nav {
+	background: rgb(239,239,239);
+	text-align: right;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 10px;
+}
+
+.imgNav {
+	width: 90px;
+	height: 40px;
 }
 
 .cube {
 	display: inline-block;
 	vertical-align: top;
 	width: 24%;
+	text-align: center;
+	border-radius: 6px;
+	height: 160px;
+	margin-left: 4px;
+	color: white;
+}
+
+.imgCube {
+	width: 40%;
+	margin-top: 10px;
+}
+
+#cube1 {
+	background: rgb(37,166,44);
+}
+
+#cube2 {
+	background: rgb(33,110,167);
+}
+
+#cube3 {
+	background: rgb(126,36,165);
+}
+
+#cube4 {
+	background: rgb(165,28,31);
 }
 
 #section1 {
-	width: 20%;
+	width: 24%;
 }
 
 #section2 {
-	width: 78%;
+	width: 72%;
+	margin-left: 1%;
+	background: white;
+	padding:10px;
 }
 
 #section1, #section2 {
@@ -22,8 +73,10 @@ body {
 	vertical-align: top;
 }
 
-.imgcube {
+.imgBarra {
 	width:90%;
+	margin-top: -12px;
+	margin-left: 5%;
 }
 
 #imgpanel {
@@ -31,13 +84,84 @@ body {
 }
 
 .userContainer {
-	background: blue;
+	background: rgb(76,108,172);
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
 	width: 24%;
+	height: 234px;
+	margin-left: 4px;
 }
 
+.headerProgress {
+	margin-left: 10px;
+	color: #999999;
+}
 .userimg {
+	width: 84%;
+}
+
+#panelLinks {
+	padding-bottom: 6px;
+	background: rgb(32,74,113);
+	margin-left: 10px;
+}
+
+#panelLinks ul li {
+	list-style: none;
+	color: white;
+}
+
+#panelProgress {
+	margin-top: 10px;
+	margin-left: 10px;
+	background: white;
+	padding-bottom: 10px;
+}
+
+.imgPanel2 {
 	width: 100%;
+	color: white;
+	height: 40px;
+	background: rgb(37,94,146);
+}
+
+.logoLinks {
+	width: 15%;
+}
+
+.logoLinks, .parrafo {
+	display: inline-block;
+	height: 40px;
+	vertical-align: top;
+}
+.parrafo {
+	margin-top:10px;
+}
+
+.articleHeader {
+	margin-top: 10px;
+	margin-left: 4px;
+	color: #999999;
+}
+
+.sendButton {
+	background: rgb(96,191,221);
+	border: none;
+	border-radius: 4px;	
+	width: 120px;
+	height: 30px;
+	color: white;
+	margin-top: -12px;
+}
+
+#firstOne {
+	width: 148.617px;
+	height: 144.6px;
+}
+
+.UserEjemplo {
+	margin-top: 10px;
+	font-size: 20px;
+	color: white;
 }
