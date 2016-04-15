@@ -1,6 +1,13 @@
 
 var operador="";
 
+function borrar() {
+	document.calculadora.operando1.value='0';
+	document.calculadora.operando2.value='0';
+	document.calculadora.resultado.value='0';
+//	document.calculadora.operando1.focus();
+}
+
 function igual() {
 	var valor1=document.calculadora.operando1.value;
 	var valor2=document.calculadora.operando2.value;

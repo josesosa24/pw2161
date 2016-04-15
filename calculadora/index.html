@@ -4,10 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Calculadora Basica</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 	<script src="javascript/calculadora.js"></script>
 </head>
 <body>
-	<h1>Calculadora Básica</h1>
+	<header>
+		CALCULADORA BASICA
+	</header>
+	
 	<form action="#" name="calculadora">
 		<table>
 			<tr>
@@ -44,13 +48,15 @@
 				<td><input class="input" type="button" value="*" onclick="operadores(this.value);"></td>
 			</tr>
 			<tr>
-				<td><input id="ceButton"class="input" type="button" value="CE"></td>
+				<td><input id="ceButton"class="input" type="button" value="CE" onclick="borrar();"></td>
 				<td><input class="input" type="button" value="0" onclick="numeros(this.value);"></td>
 				<td><input id="equalButton" class="input" type="button" value="=" onclick="igual();"></td>
 				<td><input class="input" type="button" value="/" onclick="operadores(this.value);"></td>
 			</tr>
 		</table>
-
 	</form>
+	<footer>
+		
+	</footer>
 </body>
 </html>
