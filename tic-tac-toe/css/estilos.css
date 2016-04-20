@@ -1,0 +1,40 @@
+body {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+table tr td {
+	width: 100px;
+	height: 100px;
+	font-size: 80px;
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	width: 40%;
+}
+
+#td1, #td2, #td3 {
+	border-bottom: 4px solid red;
+/*	border-right: 2px solid red;*/
+}
+
+#td7, #td8, #td9 {
+	border-top: 4px solid red;
+/*	border-right: 2px solid red;*/
+}
+
+#td1, #td4, #td7 {
+	border-right: 4px solid red;
+}
+
+#td3, #td6, #td9 {
+	border-left: 4px solid red;
+}
+
+#container {
+	width: 100%;
+	padding-left: 30%;
+	padding-right: 30%;
+}
