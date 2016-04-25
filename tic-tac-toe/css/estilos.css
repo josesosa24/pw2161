@@ -3,6 +3,24 @@ body {
 	width: 1024px;
 }
 
+header {
+	font-size: 120px;
+	text-align: center;
+}
+
+#ticTacToe {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#game {
+	font-size: 40px;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
 table tr td {
 	width: 100px;
 	height: 100px;
@@ -13,6 +31,9 @@ table tr td {
 table {
 	border-collapse: collapse;
 	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;	
+	margin-bottom: 10%;
 }
 
 #td1, #td2, #td3 {
@@ -35,6 +56,4 @@ table {
 
 #container {
 	width: 100%;
-	padding-left: 30%;
-	padding-right: 30%;
 }

@@ -7,23 +7,45 @@
 	<script src="javascript/tic_tac.js"></script>
 </head>
 <body>	
+<header>
+	<div id="ticTacToe">
+		TIC TAC TOE 
+	</div>
+	<div id="game">
+		GAME
+	</div>
+</header>
+<div>
+	<span>MATCHES: </span>
+	<span id="matches"></span>
+</div>
+
+<div>
+	<span>PLAYER 1: </span>
+	<span id="player1"></span>
+</div>
+
+<div>
+	<span>PLAYER 2: </span>
+	<span id="player2"></span>
+</div>
 
 <div id="container">
 	<table>
 		<tr>
-			<td id="td1" onclick="putsomething1();"></td>
-			<td id="td2" onclick="putsomething2();"></td>
-			<td id="td3" onclick="putsomething3();"></td>
+			<td id="td1" onclick="putsomething(this.id);">&nbsp;</td>
+			<td id="td2" onclick="putsomething(this.id);">&nbsp;</td>
+			<td id="td3" onclick="putsomething(this.id);">&nbsp;</td>
 		</tr>
 		<tr>
-			<td id="td4" onclick="putsomething4();"></td>
-			<td id="td5" onclick="putsomething5();"></td>
-			<td id="td6" onclick="putsomething6();"></td>
+			<td id="td4" onclick="putsomething(this.id);">&nbsp;</td>
+			<td id="td5" onclick="putsomething(this.id);">&nbsp;</td>
+			<td id="td6" onclick="putsomething(this.id);">&nbsp;</td>
 		</tr>
 		<tr>
-			<td id="td7" onclick="putsomething7();"></td>
-			<td id="td8" onclick="putsomething8();"></td>
-			<td id="td9" onclick="putsomething9();"></td>
+			<td id="td7" onclick="putsomething(this.id);">&nbsp;</td>
+			<td id="td8" onclick="putsomething(this.id);">&nbsp;</td>
+			<td id="td9" onclick="putsomething(this.id);">&nbsp;</td>
 		</tr>
 	</table>
 </div>	
