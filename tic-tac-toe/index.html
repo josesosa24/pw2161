@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>TIC TAC TOE</title>
 	<link rel="stylesheet" href="css/estilos.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
 	<script src="javascript/tic_tac.js"></script>
 </head>
 <body>	
@@ -11,27 +12,43 @@
 	<div id="ticTacToe">
 		TIC TAC TOE 
 	</div>
-	<div id="game">
-		GAME
-	</div>
 </header>
-<div>
-	<span>MATCHES: </span>
-	<span id="matches"></span>
-</div>
 
-<div>
-	<span>PLAYER 1: </span>
-	<span id="player1"></span>
-</div>
+<section class="container1">
+	<div class="container2"></div>
+	<div class="container2">
+		<div class="container2"id="matches1">
+		MATCHES <br>
+		<span id="matches"></span>
+	</div>
+	</div>
+	
+	<div class="container2"></div>
 
-<div>
-	<span>PLAYER 2: </span>
-	<span id="player2"></span>
-</div>
+	<table id="scores">
+	<tr>
+		<td colspan="2">SCORES</td>
+	</tr>
+	<tr>
+		<td>PLAYER 1</td>
+		<td>PLAYER 2</td>
+	</tr>
+	<tr>
+		<td><span id="player1"></span></td>
+		<td><span id="player2"></span></td>
+	</tr>
+		
+	</table>
 
-<div id="container">
-	<table>
+</section>
+
+<section class="container1">
+<div id="title"> 
+	Do you wanna <br>
+	play a game?
+</div>
+	<div id="container">
+	<table id="TicTac">
 		<tr>
 			<td id="td1" onclick="putsomething(this.id);">&nbsp;</td>
 			<td id="td2" onclick="putsomething(this.id);">&nbsp;</td>
@@ -49,6 +66,9 @@
 		</tr>
 	</table>
 </div>	
+
+</section>
+
 	
 </body>
 </html>
