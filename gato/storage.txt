@@ -1,0 +1,6 @@
+Almacenar datos del lado del cliente:
+En el navegador podemos guardar cantidades pequeñas de informacion 
+(hasta 5MB), que nos sirven para manipular ciertas condiciones en nuestras aplicaciones.
+Usando el objeto storage podemos tener acceso a 2 tipos de almacenamiento:
+	-localStorage: guarda la informacion en el navegador independientemente si se cierra el navegador.
+	-SessionStorage: Guarda la informacion hasta que se cierra la ventana o el navegador. 

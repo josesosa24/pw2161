@@ -4,7 +4,23 @@ var cuentaJuego=0;
 var cuentaJugadas=0;
 
 function iniciaGato() {
-	//En construccion 
+	//Preguntar si el navegador es compatible con localStorage
+	// localStorage.removeItem("webCuentaJuego")
+
+	if(typeof(Storage)!="undefined") {
+	
+		if(localStorage.webCuentaJuego) {
+			cuentaJuego=localStorage.webCuentaJuego;
+			cuentaJuego++;
+		}
+		else {
+			cuentaJuego=1;
+		}
+		document.getElementById("tituloJuego").innerHTML="Juego del Gato (#"+cuentaJuego+")";
+	}
+	else {
+		alert("te falta barrio")
+	}
 }
 
 function escribe(casilla) {
@@ -67,10 +83,12 @@ function validaJugada(letra) {
 
 	if(ganador) {
 		alert("!Ganador "+letra);
-		location.reload();
+		localStorage.webCuentaJuego=cuentaJuego;
+		location.reload()
 	}
 	else if(!ganador && cuentaJugadas==9) {
 		alert("Empate");
-		location.reload();
+		localStorage.webCuentaJuego=cuentaJuego;
+		location.reload()
 	}
 }
