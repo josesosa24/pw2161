@@ -4,8 +4,7 @@ var inicio= function() {
 
 var buildTable= function(number,image,name, description,comics) {
 	var table = document.getElementById("myTable");
-	//for (i=1; i<rownumber+1; i++) {
-
+	
 		var row = table.insertRow(1)
 		var cell1=row.insertCell(0)	
 		var cell2=row.insertCell(1)
@@ -18,7 +17,6 @@ var buildTable= function(number,image,name, description,comics) {
 		cell3.innerHTML = name
 		cell4.innerHTML = description
 		cell5.innerHTML = comics
-	//}
 }
 
 var clearTable=function() {
