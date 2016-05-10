@@ -13,16 +13,33 @@
 		<h1>Sistema de ejemplo</h1>
 		<nav>
 			<ul>
-				<li>Inicio</li>
-				<li>Alta</li>
-				<li>Baja</li>
-				<li>Cambios</li>
-				<li>Consultas</li>
-				<li>Salir</li>
+				<li><button type="button" class="btn btn-success btn-lg">Inicio</button></li>
+				<li><button type="button" class="btn btn-info btn-lg">Alta</button></li>
+				<li><button type="button" class="btn btn-warning btn-lg">Baja</button></li>
+				<li><button type="button" class="btn btn-danger btn-lg">Cambios</button></li>
+				<li><button type="button" class="btn btn-primary btn-lg">Consultas</button></li>
+				<li><button type="button" class="btn btn-default btn-lg">Salir</button></li>
 			</ul>
 		</nav>
 	</header>
-	<main></main>
+	<main>
+		<section>
+			<article>
+				<article class="panel panel-primary" id='datosUsuario'>
+  					<article class="panel-heading">
+   						 <h3 class="panel-title">PROPORCIONE SUS DATOS</h3>
+  					</article>
+ 					<article class="panel-body">
+   						 <form id='frmValidaEntrada'>
+   						 	<input id='txtUser' type='text' placeholder='usuario' class="form-control" autofocus required> <br>
+   						 	<input id='txtPassword' type='password' placeholder='contraseña' class="form-control" required> <br>
+   						 	<input type='submit' value='Entrar' class="btn btn-success btn-lg btn-block">
+   						 </form>
+ 				 	</article>
+				</article>
+			</article>	
+		</section>
+	</main>
 	<footer></footer>
 </body>
 </html>
