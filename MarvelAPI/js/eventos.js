@@ -42,7 +42,13 @@ var clicSearch =function() {
 			  		
 			  		path = data.data.results[i].thumbnail.path
 			  		extension=data.data.results[i].thumbnail.extension
-			  		buildTable(coincidences-i,path.concat(".").concat(extension),data.data.results[i].name,data.data.results[i].description,comicsNumber)
+			  		if (data.data.results[i].description=='') {
+			  			buildTable(coincidences-i,path.concat(".").concat(extension),data.data.results[i].name,'Description no available',comicsNumber)
+			  		}
+			  		else {
+			  			buildTable(coincidences-i,path.concat(".").concat(extension),data.data.results[i].name,data.data.results[i].description,comicsNumber)	
+			  		}
+			  		
 			  	}
 			  	  //	$('#comics').html(data.data.results[0].comics.items[0].name)
 			  }
