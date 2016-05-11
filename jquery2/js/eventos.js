@@ -1,7 +1,8 @@
 var iniciaApp= function(){
 
-	var validaEntrada =function(){
+	var validaEntrada =function() {
 
+		event.preventDefault() //Solo deja el evento que se este validando en la funcion
 		var user= $('#txtUser').val()
 		var pasword=$('#txtPassword').val()
 
@@ -12,6 +13,17 @@ var iniciaApp= function(){
 		if(pasword=="") {
 			alert('Ingresa una contraseña')
 			$('#txtPassword').focus()
+		}
+
+		//Verificar usuario y contraseña
+		if(user=='pw' && pasword=='1234') {
+			alert('Welcome to the jungle')
+			$('#datosUsuario').hide()
+			$('nav').show("slow")
+
+		}
+		else {
+			alert('You must not be here user adn password incorrect')
 		}
 
 		console.log('Se disparo el submit')

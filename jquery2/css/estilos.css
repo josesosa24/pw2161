@@ -15,6 +15,10 @@ header nav ul li {
 	margin-top: 10px;
 } 
 
+header nav ul li button {
+	width: 100px;
+}
+
 #datosUsuario {
 	width: 320px;
 }
