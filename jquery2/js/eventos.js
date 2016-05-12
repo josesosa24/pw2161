@@ -16,15 +16,34 @@ var iniciaApp= function(){
 		}
 
 		//Verificar usuario y contraseña
-		if(user=='pw' && pasword=='1234') {
-			alert('Welcome to the jungle')
-			$('#datosUsuario').hide()
-			$('nav').show("slow")
+		var parameters='accion=validaEntrada'+'&usuario='+user+"&clave="+pasword+"&id="+Math.random()
+		$.ajax({
+			beforeSend:function() { 
+				console.log('validar al usuario')
+			},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parameters,
+			sucess: function(response) {
 
-		}
-		else {
-			alert('You must not be here user adn password incorrect')
-		}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				console.log('something was wrong :c')
+			}
+
+		})
+		// if(user=='pw' && pasword=='1234') {
+		// 	alert('Welcome to the jungle')
+		// 	$('#datosUsuario').hide()
+		// 	$('nav').show("slow")
+
+		// }
+		// else {
+		// 	alert('You must not be here user adn password incorrect')
+		// }
+
 
 		console.log('Se disparo el submit')
 	}
