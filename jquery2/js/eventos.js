@@ -27,7 +27,14 @@ var iniciaApp= function(){
 			url: 'php/funciones.php',
 			data: parameters,
 			sucess: function(response) {
-
+				if(response.respuesta) {
+					alert('Welcome to the jungle')
+					$('#datosUsuario').hide()
+					$('nav').show("slow")
+				}
+				else {
+					alert('Usuario y/o contraseña incorrectos')
+				}
 			},
 			error: function(xhr,ajaxOptionx, thrownError) {
 				console.log('something was wrong :c')
