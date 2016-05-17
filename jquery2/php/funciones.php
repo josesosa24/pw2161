@@ -1,5 +1,4 @@
 <?php
-
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
   $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;

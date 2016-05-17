@@ -8,7 +8,7 @@ var iniciaApp= function(){
 
 		if(user=="") {
 			alert('Ingresa un usuario')
-			$('#txtUser').focus()
+			$('#txtUser').focus();
 		}
 		if(pasword=="") {
 			alert('Ingresa una contraseña')
@@ -16,7 +16,7 @@ var iniciaApp= function(){
 		}
 
 		//Verificar usuario y contraseña
-		var parameters='accion=validaEntrada'+'&usuario='+user+"&clave="+pasword+"&id="+Math.random()
+		var parameters="accion=validaEntrada"+"&usuario="+user+"&clave="+pasword+"&id="+Math.random()
 		$.ajax({
 			beforeSend:function() { 
 				console.log('validar al usuario')
@@ -26,7 +26,7 @@ var iniciaApp= function(){
 			dataType: 'json',
 			url: 'php/funciones.php',
 			data: parameters,
-			sucess: function(response) {
+			success: function(response) {
 				if(response.respuesta) {
 					alert('Welcome to the jungle')
 					$('#datosUsuario').hide()
@@ -38,6 +38,7 @@ var iniciaApp= function(){
 			},
 			error: function(xhr,ajaxOptionx, thrownError) {
 				console.log('something was wrong :c')
+				alert('Usuario y/o contraseña incorrectos')
 			}
 
 		})
