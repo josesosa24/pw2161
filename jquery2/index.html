@@ -14,7 +14,7 @@
 		<nav>
 			<ul>
 				<li><button type="button" class="btn btn-success btn-lg">Inicio</button></li>
-				<li><button type="button" class="btn btn-info btn-lg">Alta</button></li>
+				<li><button id="btnAltas" type="button" class="btn btn-info btn-lg">Alta</button></li>
 				<li><button type="button" class="btn btn-warning btn-lg">Baja</button></li>
 				<li><button type="button" class="btn btn-danger btn-lg">Cambios</button></li>
 				<li><button type="button" class="btn btn-primary btn-lg">Consultas</button></li>
@@ -40,18 +40,22 @@
 			</article>	
 		</section>
 		<section>
-			<article id="altaUsuarios">
-				<h2>Alta de Usuarios</h2>
-				<form action="#" id="frmAltaUsuarios" name="frmAltaUsuarios">
-					<input type="text" class="form-control" required id="txtNombreUsuario" placeholder="Usuario" name="txtNombreUsuario">
-					<input type="password" class="form-control" required id="txtContraseña" placeholder="Contraseña" name="txtContraseña">
-					<select name="txtTipoUsuario" id="txtTipoUsuario" class="form-control">
-						<option value="">Vigente</option>
-						<option value="">Baja</option>
-					</select>
-					<input type="text" class="form-control" required id="txtDepartamento" placeholder="Departamento" name="txtDepartamento">
-					<input type="submit" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-success btn-lg btn-block">
-				</form>
+			<article id="altaUsuarios" class="panel panel-primary">
+				<article class="panel-heading">
+					<h2>Alta de Usuarios</h2>
+				</article>
+				<article class="panel-body">
+					<form action="#" id="frmAltaUsuarios" name="frmAltaUsuarios">
+						<input type="text" class="form-control" required id="txtNombreUsuario" placeholder="Usuario" name="txtNombreUsuario"><br>
+						<input type="password" class="form-control" required id="txtContraseña" placeholder="Contraseña" name="txtContraseña"><br>
+						<select name="txtTipoUsuario" id="txtTipoUsuario" class="form-control"><br>
+							<option value="vigente">Vigente</option>
+							<option value="baja">Baja</option>
+						</select><br>
+						<input type="text" class="form-control" required id="txtDepartamento" placeholder="Departamento" name="txtDepartamento"><br>
+						<input type="submit" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-success btn-lg btn-block"><br>
+					</form>
+				</article>	
 			</article>
 		</section>
 	</main>

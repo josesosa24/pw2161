@@ -56,7 +56,43 @@ var iniciaApp= function(){
 		console.log('Se disparo el submit')
 	}
 
+	var altas= function() {
+		$('#altaUsuarios').show('slow')
+	}
+
+	var altaUsuario= function() {
+		//alert($('#frmAltaUsuarios').serialize())
+		event.preventDefault()
+		var parametros="accion=guardarUsuario&"+ $('#frmAltaUsuarios').serialize()+"&id="+Math.random()
+
+		$.ajax({
+			beforeSend:function() { 
+				console.log('Guardar Usuario')
+			},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
+				if(response.respuesta) {
+					alert("Usuario registrado exitosamente")
+				}
+				else {
+					alert("We're so sorry, something was wrong2")
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
+
+		})
+
+	}
+
 	$('#frmValidaEntrada').on('submit',validaEntrada)
+	$('#btnAltas').on('click', altas)
+	$('#frmAltaUsuarios').on('submit', altaUsuario)
 
 }
 $(document).on('ready',iniciaApp)

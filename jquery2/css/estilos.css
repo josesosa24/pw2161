@@ -21,4 +21,16 @@ header nav ul li button {
 
 #datosUsuario {
 	width: 320px;
+	margin: 0 auto;
+}
+
+#altaUsuarios {
+	margin: 0 auto;
+	width: 320px;
+	display: none;
+}
+
+#btnAltaUsuario {
+	    background-color: #5bc0de;
+    border-color: #46b8da;
 }
