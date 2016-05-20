@@ -74,6 +74,27 @@ function guardarUsuario() {
 
 }
 
+function bajaUsuario() {
+	$usuario= GetSQLValueString($_POST['usuario'],"text");
+	$respuesta=false;
+	$conexion=mysql_connect("localhost","root","");
+	//Seleccionar db
+	mysql_select_db("cursopw");
+
+	$baja=sprintf("delete from usuarios where usuario=%s limit 1", $usuario);
+	//$baja=sprintf("update usuarios set tipousuario='baja' where usuario=%s",$usuario)
+	//Ejecutar query
+	mysql_query($baja);
+	//cuantos registros fueron afectados
+	if(mysql_affected_rows()>0) {
+		$respuesta=true;
+	}
+	
+	$salidaJSON= array('respuesta' => $respuesta );
+	print json_encode($salidaJSON);
+
+}
+
 $accion=$_POST['accion'];
 //Menu principal
 switch ($accion) {
@@ -82,6 +103,9 @@ switch ($accion) {
 		break;
 	case 'guardarUsuario':
 		guardarUsuario();
+		break;
+	case 'bajaUsuario':
+		bajaUsuario();
 		break;
 	default:
 		# code...

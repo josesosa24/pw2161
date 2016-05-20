@@ -58,6 +58,15 @@ var iniciaApp= function(){
 
 	var altas= function() {
 		$('#altaUsuarios').show('slow')
+		$("#altaUsuarios h2").html("Alta Usuario")
+
+		$('#frmAltaUsuarios').on('submit', altaUsuario)
+		//Enciende funcion de bajausuario
+		$('#frmAltaUsuarios').off('submit', bajaUsuario)
+
+		// $('#txtContraseña').show()
+		// $('#txtTipoUsuario').show()
+		// $('#txtDepartamento').show()
 	}
 
 	var altaUsuario= function() {
@@ -90,9 +99,52 @@ var iniciaApp= function(){
 
 	}
 
+	var Bajas= function() {
+		$("#altaUsuarios").show("Baja Usuario")
+		$("#altaUsuarios h2").html("Baja Usuario")
+
+		$('#frmAltaUsuarios').off('submit', altaUsuario)
+		//Enciende funcion de bajausuario
+		$('#frmAltaUsuarios').on('submit', bajaUsuario)
+
+		// $('#txtContraseña').hide()
+		// $('#txtTipoUsuario').hide()
+		// $('#txtDepartamento').hide()
+	}
+
+	var bajaUsuario= function() {
+		event.preventDefault()
+		var datos= $('#txtNombreUsuario').val()
+		var parametros="accion=bajaUsuario"+ "&usuario="+ datos +"&id="+Math.random()
+
+		$.ajax({
+			beforeSend:function() { 
+				console.log('Usuario dado de baja')
+			},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
+				if(response.respuesta) {
+					alert("Usuario eliminado exitosamente")
+				}
+				else {
+					alert("We're so sorry, something was wrong2")
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
+
+		})
+	}
+
 	$('#frmValidaEntrada').on('submit',validaEntrada)
 	$('#btnAltas').on('click', altas)
 	$('#frmAltaUsuarios').on('submit', altaUsuario)
+	$('#btnBajas').on('click', Bajas)
 
 }
 $(document).on('ready',iniciaApp)
