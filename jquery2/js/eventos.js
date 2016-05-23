@@ -141,10 +141,39 @@ var iniciaApp= function(){
 		})
 	}
 
+	var Consultas= function () {
+		event.preventDefault()
+		$("#consultasUsuario").show("slow")
+		var parametros= "accion=consultas"+"&id="+Math.random()
+
+		$.ajax({
+			beforeSend:function() { 
+				console.log('Consultas usuarios')
+			},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
+
+				if(response.respuesta) {
+					//alert(response.tabla)
+					$('#tablaConsultas').html(response.tabla)
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
+
+		})
+	}
+
 	$('#frmValidaEntrada').on('submit',validaEntrada)
 	$('#btnAltas').on('click', altas)
 	$('#frmAltaUsuarios').on('submit', altaUsuario)
 	$('#btnBajas').on('click', Bajas)
+	$('#btnConsultas').on('click',Consultas)
 
 }
 $(document).on('ready',iniciaApp)

@@ -24,7 +24,7 @@ header nav ul li button {
 	margin: 0 auto;
 }
 
-#altaUsuarios {
+#altaUsuarios, #consultasUsuario {
 	margin: 0 auto;
 	width: 320px;
 	display: none;
@@ -34,3 +34,4 @@ header nav ul li button {
 	    background-color: #5bc0de;
     border-color: #46b8da;
 }
+
