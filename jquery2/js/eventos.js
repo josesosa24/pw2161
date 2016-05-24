@@ -72,6 +72,7 @@ var iniciaApp= function(){
 	var altaUsuario= function() {
 		//alert($('#frmAltaUsuarios').serialize())
 		event.preventDefault()
+		//$("#consultasUsuario").hide()
 		var parametros="accion=guardarUsuario&"+ $('#frmAltaUsuarios').serialize()+"&id="+Math.random()
 
 		$.ajax({
@@ -107,6 +108,7 @@ var iniciaApp= function(){
 		//Enciende funcion de bajausuario
 		$('#frmAltaUsuarios').on('submit', bajaUsuario)
 
+		$("#consultasUsuario").hide()
 		// $('#txtContraseña').hide()
 		// $('#txtTipoUsuario').hide()
 		// $('#txtDepartamento').hide()
@@ -115,6 +117,7 @@ var iniciaApp= function(){
 	var bajaUsuario= function() {
 		event.preventDefault()
 		var datos= $('#txtNombreUsuario').val()
+		$("#consultasUsuario").hide()
 		var parametros="accion=bajaUsuario"+ "&usuario="+ datos +"&id="+Math.random()
 
 		$.ajax({
@@ -143,6 +146,7 @@ var iniciaApp= function(){
 
 	var Consultas= function () {
 		event.preventDefault()
+		$("#altaUsuarios").hide()
 		$("#consultasUsuario").show("slow")
 		var parametros= "accion=consultas"+"&id="+Math.random()
 
@@ -169,11 +173,46 @@ var iniciaApp= function(){
 		})
 	}
 
+	var bajaDinamica= function() {
+		event.preventDefault()
+		var usuario= $(this).attr('id')
+		var parametros= "accion=bajaDinamica"+"&usuario="+usuario+"&id="+Math.random()
+		
+		$.ajax({
+			beforeSend:function() { 
+				console.log('Elimina usuario')
+			},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
+
+				if(response.respuesta) {
+					alert("Usuario eliminado")
+					//$('#tablaConsultas').html(response.tabla)
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
+
+		})
+
+	}
+
 	$('#frmValidaEntrada').on('submit',validaEntrada)
 	$('#btnAltas').on('click', altas)
 	$('#frmAltaUsuarios').on('submit', altaUsuario)
 	$('#btnBajas').on('click', Bajas)
 	$('#btnConsultas').on('click',Consultas)
+
+	//Eventos dinamicos
+	$("#tablaConsultas").on("click",'button',bajaDinamica)
+
+	//Otra forma
+	//$("#tablaConsultas > button").on('click',bajaDinamica)
 
 }
 $(document).on('ready',iniciaApp)

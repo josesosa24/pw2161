@@ -115,6 +115,7 @@ function consultas() {
 		$tabla.="<th>Usuario</th>";
 		$tabla.="<th>Tipo Usuario</th>";
 		$tabla.="<th>Departamento</th>";
+		$tabla.="<th>Acciones</th>";
 		$tabla.="</tr>";
 
 		while($registro=mysql_fetch_array($resultado)) {
@@ -123,10 +124,31 @@ function consultas() {
 			$tabla.="<td>".$registro["usuario"]."</td>";
 			$tabla.="<td>".$registro["tipousuario"]."</td>";
 			$tabla.="<td>".$registro["departamento"]."</td>";
+			$tabla.="<td><button id='".$registro["usuario"]."' class='btn btn-danger'>Baja</button></td>";
 			$tabla.="</tr>";
 		}
 	}
 	$salidaJSON= array('respuesta' => $respuesta, 'tabla' => $tabla);
+	print json_encode($salidaJSON);
+}
+
+function bajaDinamica() {
+	$usuario= GetSQLValueString($_POST['usuario'],"text");
+	$respuesta=false;
+	$conexion=mysql_connect("localhost","root","");
+	//Seleccionar db
+	mysql_select_db("cursopw");
+
+	$baja=sprintf("delete from usuarios where usuario=%s limit 1", $usuario);
+	//$baja=sprintf("update usuarios set tipousuario='baja' where usuario=%s",$usuario)
+	//Ejecutar query
+	mysql_query($baja);
+	//cuantos registros fueron afectados
+	if(mysql_affected_rows()>0) {
+		$respuesta=true;
+	}
+	
+	$salidaJSON= array('respuesta' => $respuesta );
 	print json_encode($salidaJSON);
 }
 
@@ -144,6 +166,9 @@ switch ($accion) {
 		break;
 	case 'consultas':
 		consultas();
+		break;
+	case 'bajaDinamica':
+		bajaDinamica();
 		break;
 	default:
 		# code...
