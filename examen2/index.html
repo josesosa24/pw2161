@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen 3</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/jquery-2.2.3.js"></script>
+	<script src="js/eventos.js"></script>
+</head>
+<body>
+	<header>
+		<h1>EXAMEN 3: ALTA DE ALMACENES</h1>
+		<nav>
+			<ul>
+				<li><button id="btnInicio" type="button" class="btn btn-info btn-lg">Inicio</button></li>
+				<li><button id="btnAltas" type="button" class="btn btn-info btn-lg">Alta</button></li>
+				<li><button id="btnConsulta" type="button" class="btn btn-info btn-lg">Consulta</button></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<article> 
+				<article class="panel panel-primary" id='altaAlmacen'>
+  					<article class="panel-heading">
+   						 <h3 class="panel-title">ALTA ALMACENES</h3>
+  					</article>
+ 					<article class="panel-body">
+   						 <form id='frmAltaAlmacen'>
+   						 	<input name='txtIdAlmacen' id='txtIdAlmacen' type='text' placeholder='clave de almacen' class="form-control" autofocus required> <br>
+   						 	<input name='txtNombre' id='txtNombre' type='text' placeholder='nombre' class="form-control" required> <br>
+   						 	<input name='txtDireccion1' id='txtDireccion1' type='text' placeholder='Direccion1' class="form-control" required> <br>
+   						 	<input name='txtDireccion2' id='txtDireccion2' type='text' placeholder='Direccion2' class="form-control" required> <br>
+   						 	<input name='txtCp' id='txtCp' type='text' placeholder='Codigo Postal' class="form-control" required> <br>
+   						 	<input name='txtLocalidad' id='txtLocalidad' type='text' placeholder='Localidad' class="form-control" required> <br>
+   						 	<input name='txtProvincia' id='txtProvincia' type='text' placeholder='Provincia' class="form-control" required> <br>
+   						 	<input type='submit' value='Guardar' class="btn btn-success btn-lg btn-block">
+   						 </form>
+ 				 	</article>
+				</article>
+			</article>
+		</section>
+
+		<section>
+			<article> 
+				<article class="panel panel-primary" id='consultaAlmacen'>
+  					<article class="panel-heading">
+   						 <h3 class="panel-title">ALMACENES</h3>
+  					</article>
+ 					<article class="panel-body">
+   						<table id="mylittletable" class="table table-striped"></table>
+ 				 	</article>
+				</article>
+			</article>
+		</section>
+	</main>
+	<footer></footer>
+</body>
+</html>
