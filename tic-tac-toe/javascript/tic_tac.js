@@ -182,10 +182,12 @@ function putsomething(td_inden) {
 	if(check1=="&nbsp;") {
 		if(countclicks%2 == 0) {
 			document.getElementById(td_inden).innerHTML='X';
+			insertar(td_inden,'X')
 		}
 		else {
 
 			document.getElementById(td_inden).innerHTML='O';
+			insertar(td_inden,'O')
 		}
 		countclicks++;
 	}
@@ -197,224 +199,107 @@ function putsomething(td_inden) {
 	player1win();	
 	checkTie();
 }
-
-
-
-
-
-
- /*
-	if((td1=='X' && td2=='X' && td3=='X')||(td1=='O' && td2=='O' && td3=='O')) {
-		if((td1=='X')&&(td2=='X')&&(td3=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td1=='O')&&(td2=='O')&&(td3=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
+function insertar(tdId,turno){
+	var parametros= "accion=insertar" + "&id=" +tdId + "&turno=" +turno;
+	$.ajax({
+		beforeSend:function() { 
 		
-		semireload();
-	}
-
-	else if(((td4=='X')&&(td5=='X')&&(td6=='X'))||((td4=='O')&&(td5=='O')&&(td6=='O'))) {
-		if((td4=='X')&&(td5=='X')&&(td6=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td4=='O')&&(td5=='O')&&(td6=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if(((td7=='X')&&(td8=='X')&&(td9=='X'))||((td7=='O')&&(td8=='O')&&(td9=='O'))) {
-		if((td7=='X')&&(td8=='X')&&(td9=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td7=='O')&&(td8=='O')&&(td9=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if(((td1=='X')&&(td4=='X')&&(td7=='X'))||((td1=='O')&&(td4=='O')&&(td7=='O'))) {
-		if((td1=='X')&&(td4=='X')&&(td7=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td1=='O')&&(td4=='O')&&(td7=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if(((td2=='X')&&(td5=='X')&&(td8=='X'))||((td2=='O')&&(td5=='O')&&(td8=='O'))) {
-		if((td2=='X')&&(td5=='X')&&(td8=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td2=='O')&&(td5=='O')&&(td8=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if(((td3=='X')&&(td6=='X')&&(td9=='X'))||((td3=='O')&&(td6=='O')&&(td9=='O'))) {
-		if((td3=='X')&&(td6=='X')&&(td9=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td3=='O')&&(td6=='O')&&(td9=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if(((td1=='X')&&(td5=='X')&&(td9=='X'))||((td1='O')&&(td5=='O')&&(td9=='O'))) {
-		if((td1=='X')&&(td5=='X')&&(td9=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td1='O')&&(td5=='O')&&(td9=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if(((td3=='X')&&(td5=='X')&&(td7=='X'))||((td3='O')&&(td5=='O')&&(td7=='O'))) {
-		if((td3=='X')&&(td5=='X')&&(td7=='X')){
-			player1++;
-			alert('Player 1 wins');
-		}
-		if((td3='O')&&(td5=='O')&&(td7=='O')) {
-			player2++;
-			alert('Player 2  wins') ;
-		}
-		semireload();
-	}
-
-	else if((td1!="&nbsp;") && (td2!="&nbsp;")&&(td3!="&nbsp;")&&(td4!="&nbsp;")&&(td5!="&nbsp;")&&(td6!="&nbsp;")&&(td7!="&nbsp;")&&(td8!="&nbsp;")&&(td9!="&nbsp;")) {
-		alert("empate");
-		semireload();
-	}
+		},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
+				if(response.respuesta) {
+					alert('Espera tu próximo turno')
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
+		
+		})
 
 }
+function inicia() {
+	var parametros= "accion=inicia"
+		
+	$.ajax({
+		beforeSend:function() { 
+		
+		},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
 
+				if(response.respuesta) {
+					
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
 
-	var td1=document.getElementById('td1').innerHTML;
-	var td2=document.getElementById('td2').innerHTML;
-	var td3=document.getElementById('td3').innerHTML;
-	var td4=document.getElementById('td4').innerHTML;
-	var td5=document.getElementById('td5').innerHTML;
-	var td6=document.getElementById('td6').innerHTML;
-	var td7=document.getElementById('td7').innerHTML;
-	var td8=document.getElementById('td8').innerHTML;
-	var td9=document.getElementById('td9').innerHTML;
+		})
 
-	if(td1=='X' && td2=='X' && td3=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
 	}
 
-	if(td4=='X' && td5=='X' && td6=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
+function refresh() {
+	var parametros= "accion=refresh"
+	$.ajax({
+		beforeSend:function() { 
+		},
+			cache: false,
+			type:'POST',
+			dataType: 'json',
+			url: 'php/funciones.php',
+			data: parametros,
+			success: function(response) {
 
-	if(td7=='X' && td8=='X' && td9=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
+				if(response.respuesta) {
+					for(var i=0;i<response.tabla.length;i++){
+						
+						if(response.tabla[i].renglon == 1 && response.tabla[i].columna == 1){
+						   document.getElementById("td1").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 1 && response.tabla[i].columna == 2){
+						   document.getElementById("td2").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 1 && response.tabla[i].columna == 3){
+						   document.getElementById("td3").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 2 && response.tabla[i].columna == 1){
+						   document.getElementById("td4").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 2 && response.tabla[i].columna == 2){
+						   document.getElementById("td5").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 2 && response.tabla[i].columna == 3){
+						   document.getElementById("td6").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 3 && response.tabla[i].columna == 1){
+						   document.getElementById("td7").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 3 && response.tabla[i].columna == 2){
+						   document.getElementById("td8").innerHTML=response.tabla[i].turno;
+						}
+						if(response.tabla[i].renglon == 3 && response.tabla[i].columna == 3){
+						   document.getElementById("td9").innerHTML=response.tabla[i].turno;
+						}
+					}
+					
+				}
+			},
+			error: function(xhr,ajaxOptionx, thrownError) {
+				alert("We're so sorry, something was wrong")
+			}
 
-	if(td1=='X' && td4=='X' && td7=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
+		})
 
-	if(td2=='X' && td5=='X' && td8=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
 
-	if(td3=='X' && td6=='X' && td9=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
-
-	if(td1=='X' && td5=='X' && td9=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
-
-	if(td3=='X' && td5=='X' && td7=='X') {
-		player1++;
-		alert('Player 1 wins');
-		semireload();
-	}
-
-	if(td1=='O' && td2=='O' && td3=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td4=='O' && td5=='O' && td6=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td7=='O' && td8=='O' && td9=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td1=='O' && td4=='O' && td7=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td2=='O' && td5=='O' && td8=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td3=='O' && td6=='O' && td9=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td1=='O' && td5=='O' && td9=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-	if(td3=='O' && td5=='O' && td7=='O') {
-		player2++;
-		alert('Player 2 wins');
-		semireload();
-	}
-
-*/
-
+}
 
